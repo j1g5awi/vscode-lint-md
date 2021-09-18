@@ -2,7 +2,7 @@
 	"name": "lint-md",
 	"displayName": "lint-md",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "j1g5aw",
 	"engines": {
 		"vscode": "^1.60.0"
@@ -14,7 +14,17 @@
 		"onLanguage:markdown"
 	],
 	"main": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"configuration": {
+			"title": "lint-md",
+			"properties": {
+				"lint-md.rules": {
+					"type": "object",
+					"description": "配置规则可参照：https://github.com/lint-md/lint-md"
+				}
+			}
+		}
+	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
 		"compile": "tsc -p ./",
