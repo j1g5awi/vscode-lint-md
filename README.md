@@ -3,12 +3,8 @@
 ## Features
 
 - [ ] 提示不符合规则的部分
+- [x] 自定义配置规则
 - [x] 格式化 Markdown
-- [ ] 自定义配置
-
-## Extension Settings
-
-TODO
 
 ## Release Notes
 
