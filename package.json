@@ -20,7 +20,126 @@
 			"properties": {
 				"lint-md.rules": {
 					"type": "object",
-					"description": "配置规则可参照：https://github.com/lint-md/lint-md"
+					"description": "配置规则可参照：https://github.com/lint-md/lint-md",
+					"properties": {
+						"space-round-alphabet": {
+							"description": "中文与英文之间需要增加空格",
+							"type": "number",
+							"default": 2
+						},
+						"space-round-number": {
+							"description": "中文与数字之间需要增加空格",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-code-lang": {
+							"description": "代码语言不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-url": {
+							"description": "链接和图片地址不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-list": {
+							"description": "List 内容不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-code": {
+							"description": "代码块内容不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-inlinecode": {
+							"description": "行内代码块内容不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-delete": {
+							"description": "delete 块内容不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-empty-blockquote": {
+							"description": "blockquote 内容不能为空",
+							"type": "number",
+							"default": 2
+						},
+						"no-special-characters": {
+							"description": "文本中不能有特殊字符",
+							"type": "number",
+							"default": 2
+						},
+						"use-standard-ellipsis": {
+							"description": "使用标准规范的省略号",
+							"type": "number",
+							"default": 2
+						},
+						"no-fullwidth-number": {
+							"description": "不能用全角数字",
+							"type": "number",
+							"default": 2
+						},
+						"no-space-in-emphasis": {
+							"description": "emphasis 内容前后不能有空格",
+							"type": "number",
+							"default": 2
+						},
+						"no-space-in-link": {
+							"description": "link 内容前后不能有空格",
+							"type": "number",
+							"default": 2
+						},
+						"no-multiple-space-blockquote": {
+							"description": "blockquote 语法不能包含有多个空格",
+							"type": "number",
+							"default": 2
+						},
+						"no-trailing-punctuation": {
+							"description": "标题不能以标点符号结尾",
+							"type": "number",
+							"default": 2
+						},
+						"no-space-in-inlinecode": {
+							"description": "行内代码内容，前后不能有空格",
+							"type": "number",
+							"default": 2
+						},
+						"no-long-code": {
+							"description": "代码块不能有过长的代码",
+							"type": "array",
+							"default": [
+								2,
+								{
+									"length": 100,
+									"exclude": []
+								}
+							],
+							"items": [
+								{
+									"type": "number",
+									"default": 2
+								},
+								{
+									"type": "object",
+									"properties": {
+										"length": {
+											"description": "每行代码接受的最大长度",
+											"type": "number",
+											"default": 100
+										},
+										"exclude": {
+											"description": "可以配置部分代码类型不做长度检查",
+											"type": "array",
+											"default": []
+										}
+									}
+								}
+							]
+						}
+					}
 				}
 			}
 		}
